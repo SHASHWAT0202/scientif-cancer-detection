@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linear Equation Calculator</title>
+    <link rel="stylesheet" href="style1.css">
+    <style>
+        /* Header and Footer Styling */
+    
+    .container {
+        text-align: center;
+        margin: 50px auto;
+        max-width: 500px;
+        font-family: Arial, sans-serif;
+    }
+    .input-group {
+        margin: 10px 0;
+    }
+    .input-group input {
+        width: 60%; /* Reduced width */
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        text-align: center;
+    }
+    button {
+        padding: 10px 20px;
+        font-size: 18px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: #0056b3;
+    }
+    .result {
+        margin-top: 20px;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+
+        header nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: black; /* Dark background for header */
+            padding: 10px 20px;
+            color: white;
+            font-family: Arial, sans-serif;
+            font-size: 18px;
+        }
+        header nav .left {
+            font-weight: bold;
+        }
+        header nav .right {
+            display: flex;
+            align-items: center;
+        }
+        header nav .right ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+            margin: 0;
+            padding: 0;
+        }
+        header nav .right ul li {
+            display: inline;
+        }
+        header nav .right ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px; /* Match the previous design */
+        }
+        header nav .right ul li a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            background-color: black; /* Dark background for footer */
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+        }
+        footer .footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom: 10px;
+        }
+        footer .footer-first {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        footer .footer-fourth ul {
+            list-style: none;
+            display: flex;
+            gap: 10px;
+            margin: 0;
+            padding: 0;
+        }
+        footer .footer-fourth ul li {
+            display: inline-block;
+        }
+        footer .footer-fourth ul li a img {
+            width: 30px;
+            height: 30px;
+        }
+        footer .footer-rights {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="left">Mathematical Modelling and Computational Thinking</div>
+            <div class="right">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="refract.html">Refractor Calculator</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <h1>Linear Equation Calculator</h1>
+        <div class="input-group">
+            <input type="number" id="n1" placeholder="Enter Number of Boxes (N1)">
+        </div>
+        <div class="input-group">
+            <input type="number" id="s1" placeholder="Enter Dimension (S1)">
+        </div>
+        <div class="input-group">
+            <input type="number" id="n2" placeholder="Enter Number of Boxes (N2)">
+        </div>
+        <div class="input-group">
+            <input type="number" id="s2" placeholder="Enter Dimension (S2)">
+        </div>
+        <button id="calculate">Calculate Equation</button>
+        <div class="result" id="result"></div>
+    </div>
+
+    <script>
+        document.getElementById('calculate').addEventListener('click', function() {
+            const n1 = parseFloat(document.getElementById('n1').value);
+            const s1 = parseFloat(document.getElementById('s1').value);
+            const n2 = parseFloat(document.getElementById('n2').value);
+            const s2 = parseFloat(document.getElementById('s2').value);
+            const resultElement = document.getElementById('result');
+
+            if (!isNaN(s1) && s1 > 0 && !isNaN(s2) && s2 > 0 && !isNaN(n1) && n1 > 0 && !isNaN(n2) && n2 > 0) {
+                const log10 = (x) => Math.log(x) / Math.log(10);
+                const x1 = log10(n1);
+                const x2 = log10(n2);
+                const y1 = log10(s1);
+                const y2 = log10(s2);
+
+                const m = (y2 - y1) / (x2 - x1);
+                const c = y1 - m * x1;
+
+                const equation = `y = ${m.toFixed(4)}x + ${c.toFixed(4)}`;
+
+                resultElement.innerHTML = `Equation:<br>${equation}<br><br>Refractor: ${m.toFixed(4)}`;
+            } else {
+                resultElement.textContent = 'Please enter valid positive numbers.';
+            }
+        });
+    </script>
+    <footer>
+        <div class="footer">
+            <div class="footer-first">Mathematical Modelling and Computational Thinking</div>
+            <div class="footer-second">
+                <a href="./publicfile/feedback.html">Feedback</a>
+            </div>
+            <div class="footer-fourth">
+                <ul>
+                    <li><a href="https://www.instagram.com" target="_blank"><img src="img6.png" alt="" class="image-top2"></a></li>
+                    <li><a href="https://www.linkedin.com" target="_blank"><img src="img7.png" alt="" class="image-top2"></a></li>
+                    <li><a href="https://github.com" target="_blank"><img src="img8.png" alt="" class="image-top2"></a></li>
+                    <li><a href="https://x.com" target="_blank"><img src="img11.png" alt="" class="image-top2"></a></li>
+                    <li><a href="#" target="_blank"><img src="img10.png" alt="" class="image-top2"></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-rights">
+            Copyright &#169; 2025 Mathematical Modelling and
+            Computational Thinking | All rights reserved.
+        </div>
+    </footer>
+</body>
+</html>

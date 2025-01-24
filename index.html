@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mathematical Modelling and Computational Thinking</title>
+    <link rel="stylesheet" href="style1.css">
+    <style>
+        /* Header Styling */
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    padding: 10px 20px;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: calc(1rem * var(--font-scale));
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+header nav .logo {
+    font-weight: bold;
+    font-size: calc(1.5rem * var(--font-scale));
+}
+header nav .right ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+header nav .right ul li {
+    display: inline;
+}
+header nav .right ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: calc(1rem * var(--font-scale));
+    transition: color 0.3s;
+}
+header nav .right ul li a:hover {
+    color: #007bff;
+}
+
+/* Footer Styling */
+footer {
+    background-color: black;
+    padding: 20px 10%;
+    font-size: calc(0.85rem * var(--font-scale));
+    text-align: center;
+    color: #555;
+    border-top: 1px solid #ddd;
+}
+footer .footer-first {
+    font-size: calc(1.2rem * var(--font-scale));
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: white;
+}
+footer .footer-second a {
+    font-size: calc(1rem * var(--font-scale));
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+}
+footer .footer-second a:hover {
+    color: white;
+}
+footer .footer-fourth ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 10px;
+}
+footer .footer-fourth ul li {
+    margin: 0 10px;
+}
+footer .footer-fourth ul li a img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s;
+}
+footer .footer-fourth ul li a img:hover {
+    transform: scale(1.1);
+}
+footer .footer-rights {
+    font-size: calc(0.8rem * var(--font-scale));
+    color: white;
+}
+
+/* Features Section Styling */
+.features {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;  /* Allow horizontal scroll if content overflows */
+    padding: 40px 20px;
+    flex-wrap: nowrap;
+}
+
+.feature {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    min-width: 300px; /* Ensure a minimum width for each card */
+    max-width: 350px; /* Set maximum width to prevent excessive stretching */
+    height: 100%; /* Ensure card takes up full height of container */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature img {
+    width: 100%;
+    height: 150px; /* Set image height */
+    object-fit: cover;
+}
+
+.feature h3 {
+    font-size: 1.2rem;
+    margin: 15px 0;
+}
+
+.feature p {
+    font-size: 1rem;
+    color: #555;
+    padding: 0 20px 20px;
+    margin: 0;
+}
+
+/* Hover Effect for Cards */
+.feature:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Prevent wrapping in smaller screens */
+@media screen and (max-width: 768px) {
+    .features {
+        flex-wrap: nowrap; /* Prevent wrapping on smaller screens */
+    }
+    .feature {
+        min-width: 250px; /* Adjust width for smaller screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .features {
+        flex-wrap: nowrap; /* Keep it in a single row on very small screens */
+    }
+    .feature {
+        min-width: 200px; /* Adjust width for very small screens */
+    }
+}
+
+/* Global Reach Section */
+.global-reach .description {
+    color: #fff;
+}
+.global-reach .headline {
+    color:#fff;
+}
+
+    </style>
+</head>
+<body>
+  <header>
+    <nav>
+        <div class="logo">Mathematical Modelling and Computational Thinking</div>
+        <div class="right">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="refract.html">Refractor Calculator</a></li>
+          </ul>
+        </div>
+    </nav>
+  </header>
+  
+  <main>
+    <section class="firstSection">
+      <div class="leftSection">
+        <h5>Mathematical Modelling and Computational Thinking</h5>
+        <h6>We analyze the fractal dimensions of healthy and diseased cells to understand their complexity using mathematical techniques. Our study focuses on neurological diseases like Alzheimer's and Parkinson's, utilizing tools such as the box counting method to quantify cellular changes and aid in early disease detection.</h6>
+        <span class="purple"></span>
+        <div class="king"></div>
+        <span id="element"></span>
+        <div class="button">
+          <button class="bt"><a href="about.html">About Us</a></button>
+        </div>
+      </div>
+      <div class="rightSection">
+        <img src="1.jpg" alt="" />
+      </div>
+    </section>
+    
+    <section class="test-platform">
+      <h2>Understanding Cellular Behavior Through Fractal Analysis </h2>
+      <p>Our project delves into the fascinating interplay between biology and mathematics, exploring how cells function under normal conditions and how they change in the presence of disease. By calculating the fractal dimension of healthy cells and comparing it with diseased cells, we uncover patterns that reveal the progression of diseases. Rooted in the hypothesis that higher stages of disease correlate with increased fractal dimensions, our research provides a unique perspective on cellular behavior and offers potential insights for medical science. Join us in this journey of discovery where biology meets mathematics to decode the complexities of life.</p>
+      
+      <section class="features">
+        <div class="feature card">
+          <img src="2.jpg" alt="Feature 1">
+          <h3>Cellular Fractal Analysis</h3>
+          <p>Analyzing cellular structures to calculate fractal dimensions in healthy and diseased states.</p>
+        </div>
+        <div class="feature card">
+          <img src="3.jpg" alt="Feature 2">
+          <h3>Disease Progression Insights</h3>
+          <p>Understanding how fractal dimensions increase with advancing stages of disease.</p>
+        </div>
+        <div class="feature card">
+          <img src="4.jpg" alt="Feature 3">
+          <h3>Mathematical Modelling</h3>
+          <p>Using computational techniques to bridge biology and mathematics in disease research.</p>
+        </div>
+        <div class="feature card">
+          <img src="5.jpg" alt="Feature 4">
+          <h3>Hypothesis Testing</h3>
+          <p>Validating the correlation between disease stages and fractal dimension variations.</p>
+        </div>
+        <div class="feature card">
+          <img src="6.jpg" alt="Feature 5">
+          <h3>Research and Discovery</h3>
+          <p>Advancing scientific knowledge at the intersection of cellular biology and computational thinking.</p>
+        </div>
+      </section>
+      
+      <section class="global-reach">
+        <div class="content">
+            <h2 class="headline">Global Research Impact</h2>
+            <h1 class="main-title">Advancing Science with<br> Cross-Disciplinary Innovation</h1>
+            <p class="description">
+                Our research bridges the gap between biology and mathematics, offering innovative methods to analyze cellular behavior and disease progression. 
+                By studying fractal dimensions, we provide insights that contribute to early detection, better understanding, and enhanced treatment strategies for diseases like cancer and Alzheimer's.
+            </p>
+            <p class="description">
+                Join us in pioneering global scientific advancements through collaborative research and cutting-edge computational techniques that aim to improve lives worldwide.
+            </p>
+        </div>
+        <div class="image-container">
+            <img src="7.jpg" alt="Global Research Impact Image" class="animated-image">
+        </div>
+      </section>
+  </main>
+  
+  <footer>
+    <div class="footer">
+      <div class="footer-first">Mathematical Modelling and Computational Thinking</div>
+      <div class="footer-second">
+        <a href="./publicfile/feedback.html">Feedback</a>
+      </div>
+      <div class="footer-fourth">
+        <ul>
+          <li><a href="https://www.instagram.com" target="_blank"><img src="img6.png" alt="" class="image-top2"></a></li>
+          <li><a href="https://www.linkedin.com" target="_blank"><img src="img7.png" alt="" class="image-top2"></a></li>
+          <li><a href="https://github.com" target="_blank"><img src="img8.png" alt="" class="image-top2"></a></li>
+          <li><a href="https://x.com" target="_blank"><img src="img11.png" alt="" class="image-top2"></a></li>
+          <li><a href="#" target="_blank"><img src="img10.png" alt="" class="image-top2"></a></li>
+      </ul>
+      </div>
+    </div>
+    <div class="footer-rights">
+      Copyright &#169; 2025 Mathematical Modelling and
+      Computational Thinking | All rights reserved.
+    </div>
+  </footer>
+
+</body>
+</html>

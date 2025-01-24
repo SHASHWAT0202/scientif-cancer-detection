@@ -1,0 +1,568 @@
+
+
+
+/* Existing styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #fff;
+  line-height: 1.6;
+  background-size: cover;
+  background-position: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.global-reach {
+  display: flex;
+  color: #fff;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+  background-color: #0e1b54;
+}
+
+.content {
+  max-width: 600px;
+  animation: fadeInLeft 2s ease-out;
+}
+
+.headline {
+  font-size: 24px;
+  color: #fff;
+}
+
+.main-title {
+  font-size: 48px;
+  color: #fff;
+  margin: 20px 0;
+}
+
+.description {
+  font-size: 18px;
+  color: #fff;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.stats {
+  display: flex;
+  gap: 30px;
+}
+
+.stat-item h3 {
+  font-size: 36px;
+  margin: 0;
+  color: #ffffff;
+}
+
+.stat-item p {
+  margin: 5px 0 0;
+  font-size: 16px;
+  color: #a3a4f4;
+}
+
+.image-container {
+  width: 400px;
+  height: auto;
+  animation: fadeInRight 2s ease-out;
+}
+
+.animated-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Animations */
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.left {
+  color: #fff;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 120px;
+  background-color: black;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  list-style: none;
+  margin: 0 23px;
+}
+
+nav ul li a {
+  font-size: 1.25rem;
+  text-decoration: none;
+  font-size: 1.25rem;
+  color: #fff;
+}
+
+nav ul li a:hover {
+  color: rgb(192, 144, 237);
+  text-decoration: none;
+}
+
+.right .button {
+  margin-left: 20px;
+}
+
+#element {
+  font-size: 2rem;
+}
+
+.bt a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.bt {
+  background-color: rgb(13, 13, 148);
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.bt:hover {
+  background-color: rgb(192, 144, 237);
+}
+
+.footer-second:hover {
+  color: rgb(192, 144, 237);
+}
+
+header .right .bt a {
+  color: #fff;
+  text-decoration: none;
+}
+
+main .firstSection {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 10%;
+  background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('./publicimg/background1.jpg') center no-repeat;
+  background-size: cover;
+}
+
+.leftSection {
+  max-width: 50%; /* Adjust the max-width of the left section to allow for longer text */
+  flex-grow: 1; /* Allow the left section to grow and take up more space */
+}
+
+.leftSection h5 {
+  font-size: 36px;
+  color: black;
+  margin-bottom: 20px;
+}
+
+.leftSection h6 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.leftSection div {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: black;
+}
+
+.leftSection .bt {
+  background-color: black;
+  border: none;
+  padding: 10px 20px;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.leftSection .bt:hover {
+  background-color: black;
+}
+
+.leftSection .bt a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.rightSection img {
+  padding-left: 10%;
+  max-width: 100%;
+}
+
+.test-platform,
+.pre-post-exam-activities {
+  padding: 50px 10%;
+  background-color: #fff;
+}
+
+.test-platform h2,
+.pre-post-exam-activities h2 {
+  color: black;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 36px;
+}
+
+.test-platform p,
+.pre-post-exam-activities p {
+  color: black;
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+
+.king {
+  font-size: 12rem;
+  font-weight: bolder;
+}
+
+.features {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.feature {
+  text-align: center;
+  padding: 20px;
+  width: 200px;
+  transition: transform 0.3s ease;
+}
+
+.feature img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
+}
+
+.feature h3 {
+  color: black;
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+.feature p {
+  color: black;
+  font-size: 16px;
+}
+
+.explore-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.explore-button a {
+  background-color: black;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+}
+
+.explore-button a:hover {
+  background-color: black;
+}
+
+.activity-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.activity {
+  text-align: center;
+  padding: 20px;
+  width: 300px;
+  transition: transform 0.3s ease;
+}
+
+.activity h3 {
+  color: black;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.activity ul {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.activity ul li {
+  color: #666;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.activity img {
+  width: 100px;
+  height: 100px;
+}
+
+/* Footer styles */
+footer {
+  background-color: black;
+  padding: 20px 10%;
+  color: #fff;
+  position: relative;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer .footer-first h2 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.footer .footer-second a,
+.footer .footer-third a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.content {
+  color: #fff;
+}
+
+.footer .footer-fourth ul {
+  display: flex;
+  list-style: none;
+}
+
+.footer .footer-fourth ul li {
+  margin-right: 10px;
+}
+
+.footer .footer-fourth ul li a img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease;
+}
+
+.footer .footer-fourth ul li a img:hover {
+  transform: scale(1.1);
+}
+
+.footer-rights {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #fff;
+}
+
+/* New animations */
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-in-from-right {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.active {
+  animation: fade-in-up 0.8s ease forwards;
+}
+
+.slide-in {
+  animation: slide-in-from-right 1s ease forwards;
+}
+
+/* Card Styles for Pre and Post Exam Activities */
+.activity-cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fade-in-up 0.8s ease forwards;
+}
+
+.card h3 {
+  color: black;
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+
+.card ul {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.card ul li {
+  color: #666;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.card img {
+  width: 100px;
+  height: 100px;
+  margin-top: 20px;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Adjust the animation for cards */
+.card.active {
+  animation: fade-in-up 0.8s ease forwards;
+}
+
+.logo {
+  font-family: 2rem;
+  font-size: 30px; /* Adjust the size as needed */
+  color: #fff; /* Adjust the color as needed */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  /* Add more CSS styles to match the logo's appearance */
+}
+
+.logo1 {
+  position: relative; /* Make the image positioned relative to its container */
+  top: 10px; /* Adjust the top position as needed */
+  left: 10px; /* Adjust the left position as needed */
+  width: 110px; /* Set the desired width of the logo */
+  height: 105px; /* Set the desired height of the logo */
+}
+
+.logo2 {
+  position: relative; /* Make the image positioned relative to its container */
+  top: 10px; /* Adjust the top position as needed */
+  left: 10px; /* Adjust the left position as needed */
+  width: 150px; /* Set the desired width of the logo */
+  height: 150px; /* Set the desired height of the logo */
+}
+
+nav {
+  height: 120px;
+}
+
+.container {
+  background: white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 30px;
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.container h1 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s ease-in-out;
+}
+
+input:focus {
+  border-color: #74ebd5;
+  outline: none;
+}
+
+button {
+  background: #74ebd5;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+  background: #66d3c8;
+}
+
+.result {
+  margin-top: 20px;
+  font-size: 20px;
+  color: black;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
